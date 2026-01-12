@@ -34,3 +34,8 @@ Matrix Matrix::multiply(const Matrix& other) const
     }
     return T;
 }
+
+Matrix Matrix::inverse() const
+{
+    
+}
