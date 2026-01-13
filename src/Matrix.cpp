@@ -19,7 +19,7 @@ Matrix Matrix::transpose() const
 
 Matrix Matrix::multiply(const Matrix& other) const
 {
-    assert(this->row()==other.cols());
+    assert(this->cols()==other.row());
     Matrix T(this->row(),other.cols());
     for(int i=0;i<T.row();i++)
     {
