@@ -3,7 +3,7 @@
 #include <vector>
 #include <cstddef>
 #include <cassert>
-
+#include <utility>
 
 class Matrix
 {
@@ -29,7 +29,18 @@ class Matrix
 
         size_t row() const{return rows;}
         size_t cols() const{return columns;}
+        
+        Matrix submatrix(size_t row_start, size_t row_end, size_t col_start, size_t col_end) const;
+        
         Matrix transpose() const;
         Matrix multiply(const Matrix& other) const;
         Matrix inverse() const;
+        
+        // Advanced Decompositions
+        Matrix cholesky() const;
+        std::pair<Matrix, Matrix> qr_decomposition() const;
+        
+        // Solvers
+        Matrix forward_substitution(const Matrix& b) const;
+        Matrix backward_substitution(const Matrix& b) const;
 };

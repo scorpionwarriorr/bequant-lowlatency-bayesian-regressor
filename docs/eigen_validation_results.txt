@@ -1,0 +1,30 @@
+==========================================
+   Eigen Validation Suite - Version 1
+==========================================
+Date of Execution: 2026-07-09T23:15:16+05:30
+Algorithm Validated: Cholesky Decomposition (OLS)
+Dataset Dimensions: 5000 rows x 10 features (Randomized)
+
+Generating exact identical dataset (5000x10)...
+Solving using Custom Cholesky Decomposition...
+Solving using Eigen LLT (Cholesky) Solver...
+
+--- Coefficient Comparison ---
+Feature 0 | Custom: -0.0071087	| Eigen: -0.0071087	| Delta: 2.86229e-17
+Feature 1 | Custom: 0.00827964	| Eigen: 0.00827964	| Delta: 6.93889e-18
+Feature 2 | Custom: 0.0050598	| Eigen: 0.0050598	| Delta: 2.60209e-18
+Feature 3 | Custom: 0.0118538	| Eigen: 0.0118538	| Delta: 5.0307e-17
+Feature 4 | Custom: 0.00917398	| Eigen: 0.00917398	| Delta: 3.29597e-17
+Feature 5 | Custom: -0.00546443	| Eigen: -0.00546443	| Delta: 1.38778e-17
+Feature 6 | Custom: -0.00726866	| Eigen: -0.00726866	| Delta: 1.82146e-17
+Feature 7 | Custom: -0.00614584	| Eigen: -0.00614584	| Delta: 1.38778e-17
+Feature 8 | Custom: 0.00227345	| Eigen: 0.00227345	| Delta: 3.03577e-18
+Feature 9 | Custom: -0.0041181	| Eigen: -0.0041181	| Delta: 1.73472e-18
+
+==========================================
+Maximum Absolute Error: 5.0307e-17
+Mean Squared Error (MSE): 5.22051e-34
+
+[SUCCESS] VALIDATION PASSED!
+Your custom engine computes the exact mathematically correct answer.
+==========================================

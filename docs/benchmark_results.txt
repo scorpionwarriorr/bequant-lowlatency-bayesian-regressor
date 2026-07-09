@@ -1,0 +1,33 @@
+==========================================================
+Google Benchmark Results - Version 1 Baseline
+==========================================================
+Date of Execution: 2026-07-09T23:15:16+05:30
+Compiler: g++ (GCC) 13.2.0
+Compiler Flags: -O3 -DBENCHMARK_STATIC_DEFINE
+Google Benchmark Version: Latest (Master Branch)
+Host OS: Windows
+CPU: 20 X 2803 MHz CPUs
+CPU Caches:
+  L1 Data 48 KiB (x10)
+  L1 Instruction 32 KiB (x10)
+  L2 Unified 1280 KiB (x10)
+  L3 Unified 24576 KiB (x1)
+
+==========================================================
+DATASET DIMENSIONS
+==========================================================
+Batch OLS Methods: 5000 rows x 100 features
+Streaming RLS:     1 row x 100 features (per tick)
+
+==========================================================
+BENCHMARK TIMINGS
+==========================================================
+----------------------------------------------------------
+Benchmark                Time             CPU   Iterations
+----------------------------------------------------------
+BM_OLS_Inverse        69.6 ms         69.4 ms            9
+BM_OLS_Cholesky       37.3 ms         37.0 ms           19
+BM_OLS_QR             2601 ms         2531 ms            1
+BM_OLS_Ridge          36.9 ms         37.0 ms           19
+BM_RLS_Update          575 us          558 us         1120
+----------------------------------------------------------
